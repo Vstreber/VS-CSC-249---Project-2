@@ -7,7 +7,7 @@
 1. Client parses user input, and takes VPN IP and port to send a string containing server IP/Port and the intended message to the VPN
     - Each data point in this string is separated by " || " so that the VPN knows where to split the information
     - A user can attempt to send any message, and the client won't complain -- only IP information and port information errors are corrected
-      - Unusable messages are dealt with at the server level. 
+      - Unusable messages are dealt with at the server level, meaning that this client-VPN pair can be used with any server.
 2. VPN splits apart message into necessary data points: the server IP, the server port, and the client's message. It then attempts to open a connection with the server, and if successful, sends the client's message to it. It waits for a response.
 
 ### VPN Server->Client Message Format + Network interactions
